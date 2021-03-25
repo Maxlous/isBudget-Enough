@@ -1,9 +1,13 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { BudgetContextFunc } from './BudgetContext'
 
 const SpentSoFar = () => {
+
+    const {spent} = useContext(BudgetContextFunc)
+
     return (
         <div className="alert alert-danger">
-            <span>Spent so far: £780</span>
+            <span>Spent so far: £{spent}</span>
         </div>
     )
 }
