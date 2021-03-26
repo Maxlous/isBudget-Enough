@@ -9,7 +9,7 @@ const Expenses = () => {
     return (
         <ul className="list-group">
             {budgetList.map(item => (
-                <ExpenseItem key={item.id} name={item.name} cost={item.cost}/>
+                <ExpenseItem key={item.id} itemID={item.id} name={item.name} cost={item.cost}/>
             ))}
         </ul>
     )

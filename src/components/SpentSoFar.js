@@ -1,5 +1,6 @@
 import React, {useContext} from 'react'
 import { BudgetContextFunc } from './BudgetContext'
+import {HiCurrencyDollar} from "react-icons/hi"
 
 const SpentSoFar = () => {
 
@@ -7,7 +8,7 @@ const SpentSoFar = () => {
 
     return (
         <div className="alert alert-danger">
-            <span>Spent so far: £{spent}</span>
+            <span>Spent so far: <HiCurrencyDollar size="1.6em"></HiCurrencyDollar> {spent}</span>
         </div>
     )
 }

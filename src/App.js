@@ -5,11 +5,11 @@ import Remaining from './components/Remaining';
 import SpentSoFar from './components/SpentSoFar';
 import Expenses from './components/Expenses';
 import AddExpense from './components/AddExpense';
-
+import "./App.css"
 const App = () => {
   return (
     <article className="container">
-      <h1 className="mt-4 align-text-center">Is My Budget Enough?</h1>
+      <h1 style={{color:"white"}} className="mt-4 font-weight-light text-center">Is My Budget Enough?</h1>
       <div className="row mt-3">
         <div className="col-sm">
           <Budget />
@@ -22,7 +22,7 @@ const App = () => {
         </div>
       </div>
       <section className="mt-3">
-        <h3>Expenses</h3>
+        <h3 style={{color:"white"}} className="font-weight-light text-center">Expenses</h3>
         <div className="row mt-4">
           <div className="col-sm">
             <Expenses />
