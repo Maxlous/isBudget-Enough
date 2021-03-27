@@ -30,7 +30,7 @@ const Budget = () => {
         <>
             <div className="alert alert-secondary d-flex justify-content-between">
                 <span>Estimated Budget: <HiCurrencyDollar size="1.6em"></HiCurrencyDollar> {budget}</span>
-                <RiEdit2Line className="mr-1" size="1.5em" onClick={editBudget}>Edit</RiEdit2Line>
+                <RiEdit2Line style={{cursor: "pointer"}} className="mr-1" size="1.5em" onClick={editBudget}>Edit</RiEdit2Line>
             </div>
             {toggleBudgetInput && 
                 <form onSubmit={handleNewBudget}>

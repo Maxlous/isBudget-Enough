@@ -34,15 +34,15 @@ const AddExpense = () => {
                 <div className="form-row align-items-center mb-3">
                     <div className="col-sm">
                         <label for="Name">Name</label> 
-                        <input onChange={handleNameInput} className="form-control" type="text" id="Name" placeholder="Enter the expense" required /> 
+                        <input onChange={handleNameInput} className="form-control rounded-pill" type="text" id="Name" placeholder="Enter the expense" required /> 
                     </div>   
                 
                     <div className="col-sm">
                         <label for="Cost">Cost</label>
-                        <input onChange={handleCostInput} className="form-control" type="number" id="Cost" placeholder="Enter the cost" required/>  
+                        <input onChange={handleCostInput} className="form-control rounded-pill" type="number" id="Cost" placeholder="Enter the cost" required/>  
                     </div>
                 </div>
-                <div className="d-flex justify-content-center">
+                <div className="d-flex justify-content-center mb-5">
                     <button style={{backgroundColor: "#0096c7", }} className="btn btn-dark align-self-center" type="submit">Add</button> 
                 </div>
            </form>

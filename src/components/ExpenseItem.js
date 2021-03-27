@@ -19,7 +19,7 @@ const ExpenseItem = ({name, cost, itemID}) => {
                 <span className="badge badge-primary badge-pill mr-4">
                     ${cost}
                 </span>
-                <TiDelete onClick={deleteExpense} size="1.6em"></TiDelete>
+                <TiDelete style={{cursor: "pointer"}} onClick={deleteExpense} size="1.6em"></TiDelete>
             </div>
         </li>
     )

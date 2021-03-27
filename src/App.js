@@ -5,6 +5,7 @@ import Remaining from './components/Remaining';
 import SpentSoFar from './components/SpentSoFar';
 import Expenses from './components/Expenses';
 import AddExpense from './components/AddExpense';
+import Search from "./components/Search"
 import "./App.css"
 const App = () => {
   return (
@@ -21,6 +22,11 @@ const App = () => {
           <SpentSoFar />
         </div>
       </div>
+      <article className="row mt-3">
+        <div className="col-sm d-flex justify-content-center">
+          <Search />
+        </div>
+      </article>
       <section className="mt-3">
         <h3 style={{color:"white"}} className="font-weight-light text-center">Expenses</h3>
         <div className="row mt-4">
