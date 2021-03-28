@@ -10,6 +10,7 @@ const ExpenseItem = ({name, cost, itemID}) => {
         setSpent(spent - cost);
         setRemaining(remaining + cost)
         setBudgetList(newList);
+        localStorage.setItem("budgetData", JSON.stringify(newList))
     }
 
     return (

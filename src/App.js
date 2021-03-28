@@ -9,7 +9,7 @@ import "./App.css"
 const App = () => {
   return (
     <article className="container">
-      <h1 style={{color:"white"}} className="mt-4 font-weight-light text-center">Is My Budget Enough?</h1>
+      <h1 style={{color:"white"}} className="mt-5 font-weight-light text-center">Is My Budget Enough?</h1>
       <div className="row mt-3">
         <div className="col-sm">
           <Budget />

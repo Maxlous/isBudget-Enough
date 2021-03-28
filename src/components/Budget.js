@@ -19,6 +19,7 @@ const Budget = () => {
     const handleNewBudget = (e) => {
         e.preventDefault()
         setBudget(newBudgetValue);
+        localStorage.setItem("budgetValue", JSON.stringify(newBudgetValue))
         setToggleBudgetInput(!toggleBudgetInput)
     }
     

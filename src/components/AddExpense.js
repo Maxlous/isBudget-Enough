@@ -3,11 +3,7 @@ import { BudgetContextFunc } from './BudgetContext'
 import { v4 as uuidv4 } from 'uuid';
 const AddExpense = () => {
 
-    const {budget, 
-        budgetList, setBudgetList, 
-        spent, setSpent,
-        setRemaining
-    } = useContext(BudgetContextFunc);
+    const {budget, budgetList, setBudgetList, setSpent, setRemaining} = useContext(BudgetContextFunc);
     const [name, setName] = useState("");
     const [cost, setCost] = useState(0)
 
@@ -15,7 +11,6 @@ const AddExpense = () => {
         setName(e.target.value)
     }
     const handleCostInput = (e) => {
-        console.log(e)
         setCost(e.target.valueAsNumber)
     }
     
@@ -23,8 +18,9 @@ const AddExpense = () => {
         e.preventDefault();
         const newBudgetList = [...budgetList, {id : uuidv4(), name, cost}];
         setBudgetList(newBudgetList)
-        setSpent(spent + cost)
+        setSpent(newBudgetList.reduce((acc, curVal) => { return acc + curVal.cost},0))
         setRemaining(budget - newBudgetList.reduce((acc, curVal) => { return acc + curVal.cost},0))
+        localStorage.setItem("budgetData", JSON.stringify(newBudgetList))
     }
 
     return (
@@ -33,12 +29,12 @@ const AddExpense = () => {
                 <h3 style={{color:"white"}} className="mb-3 mt-3 text-center font-weight-light">Add Expense</h3>
                 <div className="form-row align-items-center mb-3">
                     <div className="col-sm">
-                        <label for="Name">Name</label> 
+                        <label htmlFor="Name">Name</label> 
                         <input onChange={handleNameInput} className="form-control rounded-pill" type="text" id="Name" placeholder="Enter the expense" required /> 
                     </div>   
                 
                     <div className="col-sm">
-                        <label for="Cost">Cost</label>
+                        <label htmlFor="Cost">Cost</label>
                         <input onChange={handleCostInput} className="form-control rounded-pill" type="number" id="Cost" placeholder="Enter the cost" required/>  
                     </div>
                 </div>
