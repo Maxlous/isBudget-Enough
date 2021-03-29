@@ -1,0 +1,18 @@
+#budgetButton {
+  background-color: #0096c7;
+}
+
+@media (min-width: 768px) and (max-width: 993px) {
+  .budget-input {
+    display: flex;
+    flex-direction: row;
+  }
+  #budgetInput {
+    width: 1.4em;
+  }
+  #budgetButton {
+    position: relative;
+    left: 3em;
+    top: 0.5em;
+  }
+}

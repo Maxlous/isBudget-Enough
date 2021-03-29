@@ -2,6 +2,7 @@ import React,{ useContext, useState, useEffect } from 'react'
 import {BudgetContextFunc } from "./BudgetContext";
 import {HiCurrencyDollar} from "react-icons/hi"
 import {RiEdit2Line} from "react-icons/ri"
+import "./Budget.css"
 const Budget = () => {
 
     const [toggleBudgetInput, setToggleBudgetInput] = useState(false);
@@ -31,16 +32,16 @@ const Budget = () => {
         <>
             <div className="alert alert-secondary d-flex justify-content-between">
                 <span>Estimated Budget: <HiCurrencyDollar size="1.6em"></HiCurrencyDollar> {budget}</span>
-                <RiEdit2Line style={{cursor: "pointer"}} className="mr-1" size="1.5em" onClick={editBudget}>Edit</RiEdit2Line>
+                <RiEdit2Line id="edit-icon" style={{cursor: "pointer"}} className="mr-1" size="1.5em" onClick={editBudget}>Edit</RiEdit2Line>
             </div>
             {toggleBudgetInput && 
                 <form onSubmit={handleNewBudget}>
-                    <div className="input-group input-group-sm mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">New Budget $</span>
+                    <div className="input-group input-group-sm mb-3 budget-input">
+                        <div className="input-group-prepend">
+                            <span className="input-group-text">New Budget $</span>
                         </div>
                         <input className="form-control" onChange={handleInput} id="budgetInput" type="number"></input>
-                        <button style={{backgroundColor: "#0096c7", }} className="btn btn-dark btn-sm ml-4" type="submit">Save</button>
+                        <div id="pleaseMove"><button id="budgetButton" className="btn btn-dark btn-sm ml-4" type="submit">Save</button></div>
                     </div>
                 </form>
             }

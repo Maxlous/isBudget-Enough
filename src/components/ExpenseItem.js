@@ -14,7 +14,7 @@ const ExpenseItem = ({name, cost, itemID}) => {
     }
 
     return (
-        <li className="list-group-item d-flex justify-content-between align-items-center'">
+        <li className="list-group-item d-flex justify-content-between align-items-center mb-1">
             {name}
             <div>
                 <span className="badge badge-primary badge-pill mr-4">
