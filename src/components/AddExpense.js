@@ -21,6 +21,8 @@ const AddExpense = () => {
         setSpent(newBudgetList.reduce((acc, curVal) => { return acc + curVal.cost},0))
         setRemaining(budget - newBudgetList.reduce((acc, curVal) => { return acc + curVal.cost},0))
         localStorage.setItem("budgetData", JSON.stringify(newBudgetList))
+        e.target[0].value ="";
+        e.target[1].value ="";
     }
 
     return (
