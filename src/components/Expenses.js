@@ -9,7 +9,7 @@ const Expenses = () => {
     const [searchResults, setSearchResults] = useState(budgetList)
     
     useEffect(() => {
-        const results = budgetList.filter((item) => item.name.toLowerCase().includes(keyword));
+        const results = budgetList.filter((item) => item.name.toLowerCase().includes(keyword.toLowerCase()));
         setSearchResults(results);
     },[keyword, budgetList])
 
