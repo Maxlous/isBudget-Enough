@@ -44,7 +44,7 @@ const AddExpense = () => {
 
   return (
     <article className="border-top">
-      <form onSubmit={handleSubmit}>
+      <form data-testid="form" onSubmit={handleSubmit}>
         <h3
           style={{ color: "white" }}
           className="mb-3 mt-3 text-center font-weight-light"
