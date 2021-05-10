@@ -26,6 +26,7 @@ const ExpenseItem = ({ name, cost, itemID }) => {
       <div>
         <span className="badge badge-primary badge-pill mr-4">${cost}</span>
         <TiDelete
+          data-testid="delete-icon"
           style={{ cursor: "pointer" }}
           onClick={deleteExpense}
           size="1.6em"
